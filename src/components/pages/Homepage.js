@@ -15,6 +15,7 @@ import {
   ImageGroup,
   Benefits
 } from "components/molecules";
+import { Header } from "components/organisms";
 import Container from "components/Container";
 
 export default function Homepage() {

@@ -6,7 +6,7 @@ import {
   headerBoilerplate,
 } from "react-amphtml";
 import { ServerStyleSheet } from "styled-components";
-import "../themes";
+import "../src/themes";
 
 export default class MyDocument extends Document {
   static getInitialProps({ req, renderPage }) {
