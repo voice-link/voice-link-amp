@@ -6,7 +6,6 @@ const Button = styled.a`
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.21);
   display: inline-block;
-  margin: 1.5em 1em;
   min-width: 8em;
   padding: .4em .8em 0.3em;
   text-decoration: none;
