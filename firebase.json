@@ -1,0 +1,8 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "_next"
+    ]
+  }
+}

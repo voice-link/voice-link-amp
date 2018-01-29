@@ -1,0 +1,170 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends2 = require("babel-runtime/helpers/extends");
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _getPrototypeOf = require("babel-runtime/core-js/object/get-prototype-of");
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require("babel-runtime/helpers/classCallCheck");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require("babel-runtime/helpers/createClass");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require("babel-runtime/helpers/possibleConstructorReturn");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require("babel-runtime/helpers/inherits");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
+
+var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
+
+var _jsxFileName = "/Users/jakob/projects/voice.link-amp/pages/_document.js?entry";
+
+var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  @import url(\"https://fonts.googleapis.com/css?family=Nunito|PT+Sans\");\n\n  body {\n    font-family: \"PT Sans\", sans-serif;\n    font-size: 14pt;\n    font-weight: 300;\n    line-height: 1.5;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \"Nunito\", sans-serif;\n    font-weight: 300;\n  }\n\n  h1 {\n    font-size: 2.5em;\n  }\n\n  h2 {\n    font-size: 1.8em;\n  }\n\n  h3 {\n    font-size: 1.4em;\n  }\n\n  h4 {\n    font-size: 1.1em;\n  }\n"], ["\n  @import url(\"https://fonts.googleapis.com/css?family=Nunito|PT+Sans\");\n\n  body {\n    font-family: \"PT Sans\", sans-serif;\n    font-size: 14pt;\n    font-weight: 300;\n    line-height: 1.5;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \"Nunito\", sans-serif;\n    font-weight: 300;\n  }\n\n  h1 {\n    font-size: 2.5em;\n  }\n\n  h2 {\n    font-size: 1.8em;\n  }\n\n  h3 {\n    font-size: 1.4em;\n  }\n\n  h4 {\n    font-size: 1.1em;\n  }\n"]);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _document = require("next/dist/server/document.js");
+
+var _document2 = _interopRequireDefault(_document);
+
+var _reactAmphtml = require("react-amphtml");
+
+var _styledComponents = require("styled-components");
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// eslint-disable-next-line no-unused-expressions
+(0, _styledComponents.injectGlobal)(_templateObject);
+
+var MyDocument = function (_Document) {
+  (0, _inherits3.default)(MyDocument, _Document);
+
+  function MyDocument() {
+    (0, _classCallCheck3.default)(this, MyDocument);
+    return (0, _possibleConstructorReturn3.default)(this, (MyDocument.__proto__ || (0, _getPrototypeOf2.default)(MyDocument)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(MyDocument, [{
+    key: "render",
+    value: function render() {
+      var _props = this.props,
+          title = _props.title,
+          url = _props.url,
+          ampScriptTags = _props.ampScriptTags,
+          ampStyleTag = _props.ampStyleTag,
+          html = _props.html;
+
+      /* eslint-disable react/no-danger */
+
+      return _react2.default.createElement("html", { lang: "en", amp: "", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113
+        }
+      }, _react2.default.createElement("head", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 114
+        }
+      }, title, (0, _reactAmphtml.headerBoilerplate)(url), ampScriptTags, ampStyleTag), _react2.default.createElement("body", { dangerouslySetInnerHTML: { __html: html }, __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120
+        }
+      }));
+      /* eslint-enable */
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function getInitialProps(_ref) {
+      var req = _ref.req,
+          renderPage = _ref.renderPage;
+
+      var ampScripts = new _reactAmphtml.AmpScripts();
+      var sheet = new _styledComponents.ServerStyleSheet();
+
+      var page = renderPage(function (App) {
+        return function (props) {
+          return sheet.collectStyles(_react2.default.createElement(_reactAmphtml.AmpScriptsManager, { ampScripts: ampScripts, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 51
+            }
+          }, _react2.default.createElement(App, (0, _extends3.default)({}, props, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 52
+            }
+          }))));
+        };
+      });
+
+      var ampScriptTags = ampScripts.getScriptElements();
+
+      // AMP only allows for 1 style tag, so we need to compbine all the style
+      // tags generated by styled-components
+      /* eslint-disable react/no-danger */
+      var ampStyleTag = _react2.default.createElement("style", {
+        "amp-custom": "",
+        dangerouslySetInnerHTML: {
+          __html: sheet.getStyleElement().reduce(function (css) {
+            var _ref2 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+                _ref2$props = _ref2.props;
+
+            _ref2$props = _ref2$props === undefined ? {} : _ref2$props;
+            var _ref2$props$dangerous = _ref2$props.dangerouslySetInnerHTML;
+            _ref2$props$dangerous = _ref2$props$dangerous === undefined ? {} : _ref2$props$dangerous;
+
+            var _ref2$props$dangerous2 = _ref2$props$dangerous.__html,
+                __html = _ref2$props$dangerous2 === undefined ? "" : _ref2$props$dangerous2;
+
+            return "" + css + __html;
+          }, "")
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        }
+      });
+      /* eslint-enable */
+
+      // Get the dynamic `<title />` from the head generated by next.js
+      var title = page.head.filter(function (_ref3) {
+        var type = _ref3.type;
+        return type === "title";
+      })[0] || _react2.default.createElement("title", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        }
+      }, "ampreact");
+
+      return (0, _extends3.default)({}, page, {
+        title: title,
+        url: req.url,
+        ampScriptTags: ampScriptTags,
+        ampStyleTag: ampStyleTag
+      });
+    }
+  }]);
+  return MyDocument;
+}(_document2.default);
+
+exports.default = MyDocument;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJNeURvY3VtZW50IiwicHJvcHMiLCJ0aXRsZSIsInVybCIsImFtcFNjcmlwdFRhZ3MiLCJhbXBTdHlsZVRhZyIsImh0bWwiLCJfX2h0bWwiLCJyZXEiLCJyZW5kZXJQYWdlIiwiYW1wU2NyaXB0cyIsInNoZWV0IiwicGFnZSIsImNvbGxlY3RTdHlsZXMiLCJnZXRTY3JpcHRFbGVtZW50cyIsImdldFN0eWxlRWxlbWVudCIsInJlZHVjZSIsImNzcyIsImRhbmdlcm91c2x5U2V0SW5uZXJIVE1MIiwiaGVhZCIsImZpbHRlciIsInR5cGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOztBQUtBOzs7Ozs7QUFFQTtBQUNBOztJLEFBZ0NxQjs7Ozs7Ozs7Ozs2QkEyRFY7bUJBT0gsS0FQRyxBQU9FO1VBUEYsQUFFTCxlQUZLLEFBRUw7VUFGSyxBQUdMLGFBSEssQUFHTDtVQUhLLEFBSUwsdUJBSkssQUFJTDtVQUpLLEFBS0wscUJBTEssQUFLTDtVQUxLLEFBTUwsY0FOSyxBQU1MLEFBR0Y7O0FBQ0E7OzZCQUNFLGNBQUEsVUFBTSxNQUFOLEFBQVcsTUFBSyxLQUFoQixBQUFvQjtvQkFBcEI7c0JBQUEsQUFDRTtBQURGO09BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRztBQURIO0FBQUEsU0FBQSxBQUVHLDRDQUZILEFBRUcsQUFBa0IsQUFDbEIsTUFISCxBQUlHLGVBTEwsQUFDRSxBQU1BLHNEQUFNLHlCQUF5QixFQUFFLFFBQWpDLEFBQStCLEFBQVU7b0JBQXpDO3NCQVJKLEFBQ0UsQUFPRSxBQUdKO0FBSEk7O0FBSUw7Ozs7MENBaEYyQztVQUFuQixBQUFtQixXQUFuQixBQUFtQjtVQUFkLEFBQWMsa0JBQWQsQUFBYyxBQUMxQzs7VUFBTSxhQUFhLGtCQUFuQixBQUNBO1VBQU0sUUFBUSxzQkFBZCxBQUVBOztVQUFNLGtCQUNKLGVBQUE7ZUFBTyxpQkFBQTt1QkFDTCxBQUFNLDhCQUNKLDRCQUFBLHFCQUFtQixZQUFuQixBQUErQjt3QkFBL0I7MEJBQUEsQUFDRTtBQURGO1dBQUEsZ0NBQ0UsQUFBQyxnQ0FBRCxBQUFTOzt3QkFBVDswQkFIQyxBQUNMLEFBQ0UsQUFDRTtBQUFBO0FBQUEsY0FGSjtBQURGO0FBREYsQUFBYSxBQVViLE9BVmE7O1VBVVAsZ0JBQWdCLFdBQXRCLEFBQXNCLEFBQVcsQUFFakM7O0FBQ0E7QUFDQTtBQUNBO1VBQU07c0JBQ0osQUFDYSxBQUNYOzt3QkFDVSxBQUFNLGtCQUFOLEFBQXdCLE9BQzlCLFVBQUEsQUFDRSxLQURGOzRGQUFBLEFBUU07b0NBUk4sQUFHSTs7c0RBSEosQUFPUSxLQVBSO29EQUFBLEFBSU07MEVBSk4sQUFNVSxLQU5WOzsrREFBQSxBQUtRO2dCQUxSLEFBS1EsZ0RBTFIsQUFLaUIsS0FMakI7O3dCQUFBLEFBVUssTUFWTCxBQVVXO0FBWEwsV0FBQSxFQUhaLEFBRTJCLEFBQ2YsQUFhTjtBQWRxQixBQUN2Qjs7b0JBSEo7c0JBREYsQUFDRSxBQXFCRjtBQXJCRTtBQUNFLE9BREY7QUF1QkY7O0FBQ0E7VUFBTSxhQUNKLEFBQUssS0FBTCxBQUFVLE9BQU8saUJBQUE7WUFBQSxBQUFHLGFBQUgsQUFBRztlQUFXLFNBQWQsQUFBdUI7QUFBeEMsT0FBQSxFQUFBLEFBQWlELHNCQUNqRCxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsT0FBQSxFQUZGLEFBRUUsQUFHRjs7d0NBQUEsQUFDSztlQURMLEFBR0U7YUFBSyxJQUhQLEFBR1csQUFDVDt1QkFKRixBQUtFO3FCQUxGLEFBT0Q7QUFMRzs7Ozs7O2tCQXBEZSxBIiwiZmlsZSI6Il9kb2N1bWVudC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvamFrb2IvcHJvamVjdHMvdm9pY2UubGluay1hbXAifQ==
