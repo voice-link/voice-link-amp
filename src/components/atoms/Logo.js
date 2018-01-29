@@ -6,33 +6,18 @@ const ImgLogo = styled(Amp.Img)`
   margin: 1em;
 `;
 
-function LogoWhite() {
+function LogoBlue() {
   return (
     <ImgLogo
-      src="static/logo-white.svg"
+      src="static/logo-blue.svg"
       alt="Voice.link logo"
-      height="240"
-      width="240"
+      height="480"
+      width="387"
       layout="fixed"
     />
   );
 }
 
-function LogoColoured() {
-  return (
-    <ImgLogo
-      src="static/logo-coloured.svg"
-      alt="Voice.link logo"
-      height="275"
-      width="250"
-      layout="fixed"
-    />
-  );
-}
-
-export default function Logo({ coloured }) {
-  if (coloured) {
-    return <LogoColoured />;
-  }
-  return <LogoWhite />;
+export default function Logo() {
+  return <LogoBlue />;
 }

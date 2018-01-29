@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "themes";
 
 const Button = styled.a`
   border-radius: 8px;
@@ -11,31 +10,18 @@ const Button = styled.a`
   min-width: 8em;
   padding: .4em .8em 0.3em;
   text-decoration: none;
+  text-align: center;
   transition: .4s;
 
-  ${(props) => {
-    if (props.light) {
-      return `
-        background-color: ${theme.colors.cyan};
-        color: ${theme.colors.darkblue};
+  ${props => `
+    background-color: ${props.theme.colors.lightblue};
+    color: ${props.theme.colors.white};
 
-        &:hover {
-          background-color: ${theme.colors.darkblue};
-          color: white;
-        }
-      `;
+    &:hover {
+      background-color: ${props.theme.colors.darkblue};
     }
-    return `
-      background-color: ${theme.colors.darkblue};
-      color: ${theme.colors.cyan};
-
-      &:hover {
-        background-color: ${theme.colors.cyan};
-        color: ${theme.colors.darkblue};
-      }
-    `;
-  }}
-  `;
+  `}
+`;
 
 export default function CallToAction({ children, ...props }) {
   return (

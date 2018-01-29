@@ -2,11 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Colors = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
 const ColorTile = styled.div`
   width: 8em;
   height: 8em;
@@ -54,21 +49,26 @@ ColorCard.defaultProps = {
   value: undefined
 };
 
-export default function ColorCards({ colors }) {
+const ColorCardGroup = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+export default function Colors({ colors }) {
   return (
-    <Colors>
+    <ColorCardGroup>
       {
         Object.keys(colors).map(name =>
           <ColorCard name={name} value={colors[name]} key={name} />)
       }
-    </Colors>
+    </ColorCardGroup>
   );
 }
 
-ColorCards.propTypes = {
+Colors.propTypes = {
   colors: PropTypes.object
 };
 
-ColorCards.defaultProps = {
+Colors.defaultProps = {
   colors: {}
 };
