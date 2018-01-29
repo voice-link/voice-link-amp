@@ -1,6 +1,6 @@
-export Logo from "./Logo";
-export CallToAction from "./CallToAction";
-export Caption from "./Caption";
-export Avatar from "./Avatar";
-export TextSegment from "./TextSegment";
-export BenefitItem from "./BenefitItem";
+export { default as Logo } from "./Logo";
+export { default as CallToAction } from "./CallToAction";
+export { default as Caption } from "./Caption";
+export { default as Avatar } from "./Avatar";
+export { default as TextSegment } from "./TextSegment";
+export { default as BenefitItem } from "./BenefitItem";

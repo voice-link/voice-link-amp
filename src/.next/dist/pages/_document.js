@@ -28,13 +28,7 @@ var _inherits2 = require("babel-runtime/helpers/inherits");
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _taggedTemplateLiteral2 = require("babel-runtime/helpers/taggedTemplateLiteral");
-
-var _taggedTemplateLiteral3 = _interopRequireDefault(_taggedTemplateLiteral2);
-
-var _jsxFileName = "/Users/jakob/projects/voice.link-amp/pages/_document.js?entry";
-
-var _templateObject = (0, _taggedTemplateLiteral3.default)(["\n  @import url(\"https://fonts.googleapis.com/css?family=Nunito|PT+Sans\");\n\n  body {\n    font-family: \"PT Sans\", sans-serif;\n    font-size: 14pt;\n    font-weight: 300;\n    line-height: 1.5;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \"Nunito\", sans-serif;\n    font-weight: 300;\n  }\n\n  h1 {\n    font-size: 2.5em;\n  }\n\n  h2 {\n    font-size: 1.8em;\n  }\n\n  h3 {\n    font-size: 1.4em;\n  }\n\n  h4 {\n    font-size: 1.1em;\n  }\n"], ["\n  @import url(\"https://fonts.googleapis.com/css?family=Nunito|PT+Sans\");\n\n  body {\n    font-family: \"PT Sans\", sans-serif;\n    font-size: 14pt;\n    font-weight: 300;\n    line-height: 1.5;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: \"Nunito\", sans-serif;\n    font-weight: 300;\n  }\n\n  h1 {\n    font-size: 2.5em;\n  }\n\n  h2 {\n    font-size: 1.8em;\n  }\n\n  h3 {\n    font-size: 1.4em;\n  }\n\n  h4 {\n    font-size: 1.1em;\n  }\n"]);
+var _jsxFileName = "/Users/jakob/projects/voice.link-amp/src/pages/_document.js?entry";
 
 var _react = require("react");
 
@@ -48,12 +42,11 @@ var _reactAmphtml = require("react-amphtml");
 
 var _styledComponents = require("styled-components");
 
+require("../themes");
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
-
-// eslint-disable-next-line no-unused-expressions
-(0, _styledComponents.injectGlobal)(_templateObject);
 
 var MyDocument = function (_Document) {
   (0, _inherits3.default)(MyDocument, _Document);
@@ -77,16 +70,16 @@ var MyDocument = function (_Document) {
 
       return _react2.default.createElement("html", { lang: "en", amp: "", __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 81
         }
       }, _react2.default.createElement("head", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 82
         }
       }, title, (0, _reactAmphtml.headerBoilerplate)(url), ampScriptTags, ampStyleTag), _react2.default.createElement("body", { dangerouslySetInnerHTML: { __html: html }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 88
         }
       }));
       /* eslint-enable */
@@ -104,12 +97,12 @@ var MyDocument = function (_Document) {
         return function (props) {
           return sheet.collectStyles(_react2.default.createElement(_reactAmphtml.AmpScriptsManager, { ampScripts: ampScripts, __source: {
               fileName: _jsxFileName,
-              lineNumber: 51
+              lineNumber: 19
             }
           }, _react2.default.createElement(App, (0, _extends3.default)({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 52
+              lineNumber: 20
             }
           }))));
         };
@@ -139,7 +132,7 @@ var MyDocument = function (_Document) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 32
         }
       });
       /* eslint-enable */
@@ -151,7 +144,7 @@ var MyDocument = function (_Document) {
       })[0] || _react2.default.createElement("title", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 58
         }
       }, "ampreact");
 
@@ -167,4 +160,4 @@ var MyDocument = function (_Document) {
 }(_document2.default);
 
 exports.default = MyDocument;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJNeURvY3VtZW50IiwicHJvcHMiLCJ0aXRsZSIsInVybCIsImFtcFNjcmlwdFRhZ3MiLCJhbXBTdHlsZVRhZyIsImh0bWwiLCJfX2h0bWwiLCJyZXEiLCJyZW5kZXJQYWdlIiwiYW1wU2NyaXB0cyIsInNoZWV0IiwicGFnZSIsImNvbGxlY3RTdHlsZXMiLCJnZXRTY3JpcHRFbGVtZW50cyIsImdldFN0eWxlRWxlbWVudCIsInJlZHVjZSIsImNzcyIsImRhbmdlcm91c2x5U2V0SW5uZXJIVE1MIiwiaGVhZCIsImZpbHRlciIsInR5cGUiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOztBQUtBOzs7Ozs7QUFFQTtBQUNBOztJLEFBZ0NxQjs7Ozs7Ozs7Ozs2QkEyRFY7bUJBT0gsS0FQRyxBQU9FO1VBUEYsQUFFTCxlQUZLLEFBRUw7VUFGSyxBQUdMLGFBSEssQUFHTDtVQUhLLEFBSUwsdUJBSkssQUFJTDtVQUpLLEFBS0wscUJBTEssQUFLTDtVQUxLLEFBTUwsY0FOSyxBQU1MLEFBR0Y7O0FBQ0E7OzZCQUNFLGNBQUEsVUFBTSxNQUFOLEFBQVcsTUFBSyxLQUFoQixBQUFvQjtvQkFBcEI7c0JBQUEsQUFDRTtBQURGO09BQUEsa0JBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDRztBQURIO0FBQUEsU0FBQSxBQUVHLDRDQUZILEFBRUcsQUFBa0IsQUFDbEIsTUFISCxBQUlHLGVBTEwsQUFDRSxBQU1BLHNEQUFNLHlCQUF5QixFQUFFLFFBQWpDLEFBQStCLEFBQVU7b0JBQXpDO3NCQVJKLEFBQ0UsQUFPRSxBQUdKO0FBSEk7O0FBSUw7Ozs7MENBaEYyQztVQUFuQixBQUFtQixXQUFuQixBQUFtQjtVQUFkLEFBQWMsa0JBQWQsQUFBYyxBQUMxQzs7VUFBTSxhQUFhLGtCQUFuQixBQUNBO1VBQU0sUUFBUSxzQkFBZCxBQUVBOztVQUFNLGtCQUNKLGVBQUE7ZUFBTyxpQkFBQTt1QkFDTCxBQUFNLDhCQUNKLDRCQUFBLHFCQUFtQixZQUFuQixBQUErQjt3QkFBL0I7MEJBQUEsQUFDRTtBQURGO1dBQUEsZ0NBQ0UsQUFBQyxnQ0FBRCxBQUFTOzt3QkFBVDswQkFIQyxBQUNMLEFBQ0UsQUFDRTtBQUFBO0FBQUEsY0FGSjtBQURGO0FBREYsQUFBYSxBQVViLE9BVmE7O1VBVVAsZ0JBQWdCLFdBQXRCLEFBQXNCLEFBQVcsQUFFakM7O0FBQ0E7QUFDQTtBQUNBO1VBQU07c0JBQ0osQUFDYSxBQUNYOzt3QkFDVSxBQUFNLGtCQUFOLEFBQXdCLE9BQzlCLFVBQUEsQUFDRSxLQURGOzRGQUFBLEFBUU07b0NBUk4sQUFHSTs7c0RBSEosQUFPUSxLQVBSO29EQUFBLEFBSU07MEVBSk4sQUFNVSxLQU5WOzsrREFBQSxBQUtRO2dCQUxSLEFBS1EsZ0RBTFIsQUFLaUIsS0FMakI7O3dCQUFBLEFBVUssTUFWTCxBQVVXO0FBWEwsV0FBQSxFQUhaLEFBRTJCLEFBQ2YsQUFhTjtBQWRxQixBQUN2Qjs7b0JBSEo7c0JBREYsQUFDRSxBQXFCRjtBQXJCRTtBQUNFLE9BREY7QUF1QkY7O0FBQ0E7VUFBTSxhQUNKLEFBQUssS0FBTCxBQUFVLE9BQU8saUJBQUE7WUFBQSxBQUFHLGFBQUgsQUFBRztlQUFXLFNBQWQsQUFBdUI7QUFBeEMsT0FBQSxFQUFBLEFBQWlELHNCQUNqRCxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsT0FBQSxFQUZGLEFBRUUsQUFHRjs7d0NBQUEsQUFDSztlQURMLEFBR0U7YUFBSyxJQUhQLEFBR1csQUFDVDt1QkFKRixBQUtFO3FCQUxGLEFBT0Q7QUFMRzs7Ozs7O2tCQXBEZSxBIiwiZmlsZSI6Il9kb2N1bWVudC5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiIvVXNlcnMvamFrb2IvcHJvamVjdHMvdm9pY2UubGluay1hbXAifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9wYWdlcy9fZG9jdW1lbnQuanMiXSwibmFtZXMiOlsiTXlEb2N1bWVudCIsInByb3BzIiwidGl0bGUiLCJ1cmwiLCJhbXBTY3JpcHRUYWdzIiwiYW1wU3R5bGVUYWciLCJodG1sIiwiX19odG1sIiwicmVxIiwicmVuZGVyUGFnZSIsImFtcFNjcmlwdHMiLCJzaGVldCIsInBhZ2UiLCJjb2xsZWN0U3R5bGVzIiwiZ2V0U2NyaXB0RWxlbWVudHMiLCJnZXRTdHlsZUVsZW1lbnQiLCJyZWR1Y2UiLCJjc3MiLCJkYW5nZXJvdXNseVNldElubmVySFRNTCIsImhlYWQiLCJmaWx0ZXIiLCJ0eXBlIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBQ0E7Ozs7QUFDQTs7QUFLQTs7QUFDQTs7Ozs7O0ksQUFFcUI7Ozs7Ozs7Ozs7NkJBMkRWO21CQU9ILEtBUEcsQUFPRTtVQVBGLEFBRUwsZUFGSyxBQUVMO1VBRkssQUFHTCxhQUhLLEFBR0w7VUFISyxBQUlMLHVCQUpLLEFBSUw7VUFKSyxBQUtMLHFCQUxLLEFBS0w7VUFMSyxBQU1MLGNBTkssQUFNTCxBQUdGOztBQUNBOzs2QkFDRSxjQUFBLFVBQU0sTUFBTixBQUFXLE1BQUssS0FBaEIsQUFBb0I7b0JBQXBCO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNFLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0c7QUFESDtBQUFBLFNBQUEsQUFFRyw0Q0FGSCxBQUVHLEFBQWtCLEFBQ2xCLE1BSEgsQUFJRyxlQUxMLEFBQ0UsQUFNQSxzREFBTSx5QkFBeUIsRUFBRSxRQUFqQyxBQUErQixBQUFVO29CQUF6QztzQkFSSixBQUNFLEFBT0UsQUFHSjtBQUhJOztBQUlMOzs7OzBDQWhGMkM7VUFBbkIsQUFBbUIsV0FBbkIsQUFBbUI7VUFBZCxBQUFjLGtCQUFkLEFBQWMsQUFDMUM7O1VBQU0sYUFBYSxrQkFBbkIsQUFDQTtVQUFNLFFBQVEsc0JBQWQsQUFFQTs7VUFBTSxrQkFDSixlQUFBO2VBQU8saUJBQUE7dUJBQ0wsQUFBTSw4QkFDSiw0QkFBQSxxQkFBbUIsWUFBbkIsQUFBK0I7d0JBQS9COzBCQUFBLEFBQ0U7QUFERjtXQUFBLGdDQUNFLEFBQUMsZ0NBQUQsQUFBUzs7d0JBQVQ7MEJBSEMsQUFDTCxBQUNFLEFBQ0U7QUFBQTtBQUFBLGNBRko7QUFERjtBQURGLEFBQWEsQUFVYixPQVZhOztVQVVQLGdCQUFnQixXQUF0QixBQUFzQixBQUFXLEFBRWpDOztBQUNBO0FBQ0E7QUFDQTtVQUFNO3NCQUNKLEFBQ2EsQUFDWDs7d0JBQ1UsQUFBTSxrQkFBTixBQUF3QixPQUM5QixVQUFBLEFBQ0UsS0FERjs0RkFBQSxBQVFNO29DQVJOLEFBR0k7O3NEQUhKLEFBT1EsS0FQUjtvREFBQSxBQUlNOzBFQUpOLEFBTVUsS0FOVjs7K0RBQUEsQUFLUTtnQkFMUixBQUtRLGdEQUxSLEFBS2lCLEtBTGpCOzt3QkFBQSxBQVVLLE1BVkwsQUFVVztBQVhMLFdBQUEsRUFIWixBQUUyQixBQUNmLEFBYU47QUFkcUIsQUFDdkI7O29CQUhKO3NCQURGLEFBQ0UsQUFxQkY7QUFyQkU7QUFDRSxPQURGO0FBdUJGOztBQUNBO1VBQU0sYUFDSixBQUFLLEtBQUwsQUFBVSxPQUFPLGlCQUFBO1lBQUEsQUFBRyxhQUFILEFBQUc7ZUFBVyxTQUFkLEFBQXVCO0FBQXhDLE9BQUEsRUFBQSxBQUFpRCxzQkFDakQsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLE9BQUEsRUFGRixBQUVFLEFBR0Y7O3dDQUFBLEFBQ0s7ZUFETCxBQUdFO2FBQUssSUFIUCxBQUdXLEFBQ1Q7dUJBSkYsQUFLRTtxQkFMRixBQU9EO0FBTEc7Ozs7OztrQkFwRGUsQSIsImZpbGUiOiJfZG9jdW1lbnQuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL2pha29iL3Byb2plY3RzL3ZvaWNlLmxpbmstYW1wIn0=
