@@ -25,16 +25,7 @@ export default function Homepage() {
         <title>Voice.link | Having a great conversation</title>
       </Head>
 
-      <ViewSection panorama>
-        <Logo />
-
-        <Caption>
-          Wir verbinden Sprachassistenten aller Hersteller mit Hilfe künstlicher Intelligenz
-          zu einem einzigartigen Erlebnis für ihre Kunden.
-        </Caption>
-
-        <CallToAction light>Los geht's</CallToAction>
-      </ViewSection>
+      <Header />
 
       <ViewSection>
         <h2>Conversational Design</h2>

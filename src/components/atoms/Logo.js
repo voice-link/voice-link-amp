@@ -2,19 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { Amp } from 'react-amphtml';
 
-const ImgLogo = styled(Amp.Img)`
-  margin: 1em;
+const LogoWrapper = styled.div`
+  width: 60%;
+  max-width: 12em;
+  min-width: 6em;
 `;
 
 function LogoBlue() {
   return (
-    <ImgLogo
-      src="static/logo-blue.svg"
-      alt="Voice.link logo"
-      height="480"
-      width="387"
-      layout="fixed"
-    />
+    <LogoWrapper>
+      <Amp.Img
+        src="static/logo-blue.svg"
+        alt="Voice.link logo"
+        height="387"
+        width="480"
+        layout="responsive"
+      />
+    </LogoWrapper>
   );
 }
 
