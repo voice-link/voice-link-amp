@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import colors from "themes/colors";
 
 const ColorTile = styled.div`
   width: 8em;
   height: 8em;
-  background-color: ${props => props.color}
+  background-color: ${props => colors[props.color]}
 `;
 
 const ColorFrame = styled.div`

@@ -9,37 +9,34 @@ const Section = styled.section`
   display: flex;
   flex-flow: column;
   justify-content: center;
-  min-height: 100vh;
-  padding: 0 .4em;
+  min-height: 90vh;
+  padding: 1em;
 
   ${props => props.color && `
     background-color: ${theme.colors[props.color]};
-    color: white;
   `}
 
-  ${props => props.panorama && `
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 80vh;
-    background-image: url("static/panorama.svg");
+  ${props => props.header && `
+    background-color: ${props.theme.colors.almostblack};
+    background-image: url(static/doodle_background.svg);
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: bottom center;
     background-size: cover;
-    color: white;
+    color: ${props.theme.colors.white};
+    justify-content: space-between;
   `}
 
-  ${props => props.cutaway && `
-    background-image: url("static/section-cutaway.svg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
+  ${props => props.footer && `
+    background-color: ${props.theme.colors.almostblack};
+    background-image: url(static/doodle_background_footer.svg);
     background-size: contain;
-  `}
-
-  ${props => props.drop && `
-    background-image: url("static/section-cutaway.svg");
     background-repeat: no-repeat;
-    background-position: center -6em;
-    background-size: contain;
+    background-position: center bottom;
+    color: ${props.theme.colors.white};
+    text-align: center;
+    margin-top: 6rem;
+    padding-top: 5rem;
+    min-height: auto;
   `}
 `;
 

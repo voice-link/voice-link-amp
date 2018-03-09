@@ -4,10 +4,14 @@ import Head from "next/head";
 import {
   Logo,
   CallToAction,
+  Headline,
+  SectionHeadline,
   Caption,
+  HeadAndClaim,
   Avatar,
   TextSegment,
-  BenefitItem
+  BenefitItem,
+  MouseScroll
 } from "components/atoms";
 import {
   ViewSection,
@@ -15,7 +19,6 @@ import {
   ImageGroup,
   Benefits
 } from "components/molecules";
-import { Header } from "components/organisms";
 import Container from "components/Container";
 
 export default function Homepage() {
@@ -25,81 +28,75 @@ export default function Homepage() {
         <title>Voice.link | Having a great conversation</title>
       </Head>
 
-      <Header />
+      <ViewSection header>
+        <Logo />
 
-      <ViewSection>
-        <h2>Conversational Design</h2>
+        <HeadAndClaim>
+          <Headline>
+            Wir sind fasziniert von Sprache
+          </Headline>
+          <Caption>Sprachassistenten + ai = wow🔥</Caption>
+        </HeadAndClaim>
 
-        <Avatar avatar="avatar1" />
-
-        <TextSegment>
-          Wir konzipieren Benutzererlebnisse und helfen ihnen dabei, die richtige
-          Botschaft an ihre Kunden zu senden.
-        </TextSegment>
-
-        <h2>Sprachplattformen</h2>
-
-        <Avatar avatar="device1" size={240} />
-        <VendorLogos size={40} />
-
-        <TextSegment>
-          Sie profitieren von unseren umfangreichen Kenntnissen der
-          Entwicklungsplattformen (SDK) für Alexa-Skills, Google Actions und
-          Messenger-API.
-        </TextSegment>
+        <MouseScroll />
       </ViewSection>
 
-      <ViewSection>
-        <h2>Service-Integration</h2>
-
-        <Avatar avatar="integration" />
+      <ViewSection id="start">
+        <SectionHeadline>🤖 ein freundlicher Helfer</SectionHeadline>
 
         <TextSegment>
-          Kundenkonten, Warenkörbe, Zahlungsvorgänge, Bestellhistorie ‒ jegliche
-          Art von Daten können wir miteinander verbinden.
+          Wir entwickeln Benutzererlebnisse und helfen deinem Unternehmen, die richtige
+          Botschaft an deine Kunden zu senden. Du profitierst von unseren umfangreichen Kenntnissen der
+          Sprachassistenz-Plattfomen <i>Amazon Alexa</i>, <i>Google Home</i> und <i>Facebook Messenger</i>.
         </TextSegment>
 
-        <h2>Künstliche Intelligenz</h2>
-
-        <Avatar avatar="ai" size={120} />
+        <VendorLogos size={76} />
 
         <TextSegment>
-          Mit Hilfe Künstlicher Intelligenz (KI) und Verarbeitung Natürlicher Sprache
-          (NLP) gelingt es, die Beziehung zu ihren Kunden zu automatisieren.
+          Verbinde deine Kundenkonten, Warenkörbe und Zahlungsvorgänge ganz einfach mit der jeweiligen Plattform.
         </TextSegment>
+
+        <CallToAction href="#pakete">Schau dir an, wie das geht</CallToAction>
       </ViewSection>
 
-      <ViewSection drop>
-        <h2>Ihre Vorteile</h2>
+      <ViewSection id="ki">
+        <SectionHeadline>Künstliche Intelligenz</SectionHeadline>
 
         <TextSegment>
-          Ihre Sachbearbeiter werden entlastet und können sich auf wirklich
-          wertschöpfende Tätigkeiten konzentrieren.
+          Mit Hilfe Künstlicher Intelligenz und Intent-Recognition nehmen wir Dir
+          ein paar der alltäglichen Sorgen.
+          Deine Mitarbeiter werden entlastet und können sich um
+          wirklich wichtige Dinge kümmern.
         </TextSegment>
 
-        <ImageGroup count={2} size={120}>
-          <Avatar avatar="avatar2" size={120} />
-          <Avatar avatar="avatar4" size={120} />
-          <Avatar avatar="avatar3" size={120} />
+        <ImageGroup count={2} size={240}>
+          <Avatar avatar="avatar1" />
+          <Avatar avatar="avatar2" />
+          <Avatar avatar="avatar3" />
         </ImageGroup>
 
         <Benefits>
           <BenefitItem icon="✈️">
-            mehr Nutzer-Engagement durch zusätzliche Interaktionsmöglichkeit
+            engagiertere Nutzer
           </BenefitItem>
           <BenefitItem icon="❤️">
-            höhere Kundenbindung und Kundenzufriedenheit
+            zufriedenere Kunden
           </BenefitItem>
           <BenefitItem icon="🌟">
             effizientere Prozesse
           </BenefitItem>
         </Benefits>
 
-        <CallToAction light>Erfahren Sie mehr</CallToAction>
+        <CallToAction wide href="#pakete">Erfahre, wie es geht</CallToAction>
       </ViewSection>
 
-      <ViewSection>
-        <h2>Wählen Sie ein Buchungspaket</h2>
+      <ViewSection id="pakete">
+        <SectionHeadline>Wähle dein Paket</SectionHeadline>
+
+        <TextSegment>
+          Wir haben drei Pakete für dich zusammengestellt. Wenn Dir eins gefällt,
+          klicke auf <span className="call-to-action">Jetzt buchen</span>, um direkt loszulegen.
+        </TextSegment>
 
         <h3>Amazon Alexa oder Google Home</h3>
 
@@ -110,7 +107,7 @@ export default function Homepage() {
           <li>Branding</li>
         </ul>
 
-        <CallToAction>Jetzt buchen</CallToAction>
+        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
 
         <h3>Facebook Messenger oder eigene Chat-Plattform</h3>
 
@@ -121,7 +118,7 @@ export default function Homepage() {
           <li>Webentwicklung</li>
         </ul>
 
-        <CallToAction>Jetzt buchen</CallToAction>
+        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
 
         <h3>Dynamische Web-Dienste & KI</h3>
 
@@ -136,7 +133,7 @@ export default function Homepage() {
           </li>
         </ul>
 
-        <CallToAction>Jetzt buchen</CallToAction>
+        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
 
         <h3>Integration für Handel und Kundendienst</h3>
 
@@ -149,23 +146,18 @@ export default function Homepage() {
           <li>Waren- und Kundendaten (WaWi & CRM)</li>
         </ul>
 
-        <CallToAction>Jetzt buchen</CallToAction>
+        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
       </ViewSection>
 
-      <ViewSection id="go">
-        <h2>
-          <span role="img" aria-label="Ausdruck von Überraschung">😲</span>
-          Upps… wir sind noch nicht soweit!
-        </h2>
-
+      <ViewSection footer>
         <p>
-          Geben Sie ihre Emailadresse ein und wir melden uns bei Ihnen,
-          sobald wir ihnen den vollen Service garantieren können.
+        Voice.link Speech Interaction Design<br/>
+        Schillerstraße 40, 38440 Wolfsburg
         </p>
 
         <p>
-          <input type="email" placeholder="Bitte geben Sie ihre Email-Adresse ein" />
-          <button>Senden</button>
+        hello@voice.link<br/>
+        +49 5361 83 49 128
         </p>
       </ViewSection>
 

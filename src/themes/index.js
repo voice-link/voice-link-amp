@@ -7,8 +7,7 @@ injectGlobal`
   @import url("https://fonts.googleapis.com/css?family=Nunito|PT+Sans");
 
   body {
-    ${Object.keys(fonts.body)
-    .map(propName => `${propName}: ${fonts.body[propName]};`)}
+    ${fonts.body}
     line-height: 1.5;
   }
 
@@ -31,6 +30,13 @@ injectGlobal`
 
   h4 {
     font-size: 1.1em;
+  }
+
+  span.call-to-action {
+    border: 2px dotted ${colors.almostblack};
+    border-radius: 0.5em;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
   }
 `;
 

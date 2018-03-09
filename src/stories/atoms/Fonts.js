@@ -8,11 +8,7 @@ const FontListItem = styled.li`
     list-style: none;
     margin: 1rem 0;
 
-    ${props => `
-        font-family: ${props.font["font-family"]};
-        font-weight: ${props.font["font-weight"]};
-        font-size: ${props.font["font-size"]};
-      `}
+    ${props => props.font}
   `;
 
 const Subtext = styled.div`
@@ -30,7 +26,7 @@ export default function Fonts({ fonts }) {
           <FontListItem fontName={fontName} font={fonts[fontName]}>
             {fontName[0].toUpperCase()}{fontName.substr(1)}<br />
             <Subtext>
-              {fonts[fontName]["font-family"]} {fonts[fontName]["font-weight"]}, {fonts[fontName]["font-size"]}
+              {fonts[fontName]}
             </Subtext>
           </FontListItem>
         ))
