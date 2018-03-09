@@ -1,8 +1,7 @@
 export default {
-  darkblue: "hsl(195, 87%, 47%)",
-  lightblue: "hsl(193, 74%, 62%)",
-  darkgrey: "hsl(0, 0%, 70%)",
-  lightgrey: "hsl(0, 0%, 84%)",
-  black: "hsl(0, 0%, 0%)",
-  white: "hsl(0, 0%, 100%)"
+  accent: "hsl(356, 85%, 59%)",
+  accentLightTransparent: "hsla(356,85%,89%,0.3)",
+  accentDarkTransparent: "hsla(356,85%,59%, 0.5)",
+  almostblack: "hsla(210, 11%, 15%, 1)",
+  white: "#fff"
 };

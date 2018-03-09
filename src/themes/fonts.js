@@ -1,17 +1,31 @@
+import colors from "./colors";
+
 export default {
-  caption: {
-    "font-family": "Nunito, sans-serif",
-    "font-weight": 300,
-    "font-size": "25pt"
-  },
-  headline: {
-    "font-family": "Nunito, sans-serif",
-    "font-weight": 300,
-    "font-size": "28pt"
-  },
-  body: {
-    "font-family": "\"PT Sans\", sans-serif",
-    "font-weight": 100,
-    "font-size": "21pt"
-  }
+  headline: `
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1;
+  `,
+  sectionHeadline: `
+    font-weight: 700;
+    font-size: 5rem;
+  `,
+  caption: `
+    font-weight: 400;
+    font-size: 2.7rem;
+  `,
+  body: `
+    color: ${colors.almostblack};
+    font-family: "Averta Standard", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+    word-break: normal;
+  `,
+  accent: `
+    color: ${colors.accent};
+  `,
+  link: `
+    text-decoration: none;
+    color: ${colors.accent};
+  `
 };

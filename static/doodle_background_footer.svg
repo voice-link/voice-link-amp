@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="392px" viewBox="0 0 1440 392" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop HD</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(708.500000, 194.000000) scale(1, -1) translate(-708.500000, -194.000000) translate(45.000000, 48.000000)">
+            <polygon id="Triangle" stroke="#61BFAD" stroke-width="4" transform="translate(1089.500000, 141.500000) rotate(-65.000000) translate(-1089.500000, -141.500000) " points="1089.5 126 1105 157 1074 157"></polygon>
+            <polygon id="Triangle-Copy-2" stroke="#61BFAD" stroke-width="2" transform="translate(335.000000, 214.000000) rotate(-124.000000) translate(-335.000000, -214.000000) " points="335 209 340 219 330 219"></polygon>
+            <polygon id="Triangle" stroke="#FFD101" stroke-width="4" transform="translate(173.962497, 186.000000) rotate(-28.000000) translate(-173.962497, -186.000000) " points="173.962497 170.5 189.462497 201.5 158.462497 201.5"></polygon>
+            <polygon id="Triangle-Copy-3" stroke="#FFD101" stroke-width="2" transform="translate(800.000000, 130.000000) rotate(-28.000000) translate(-800.000000, -130.000000) " points="800 126 804 134 796 134"></polygon>
+            <polygon id="Triangle-Copy-4" stroke="#FFD101" stroke-width="2" transform="translate(1155.000000, 265.000000) rotate(-28.000000) translate(-1155.000000, -265.000000) " points="1155 261 1159 269 1151 269"></polygon>
+            <polygon id="Triangle-Copy" stroke="#B18AE0" stroke-width="4" transform="translate(17.674977, 252.734699) rotate(46.000000) translate(-17.674977, -252.734699) " points="17.6749771 240.234699 30.1749771 265.234699 5.17497713 265.234699"></polygon>
+            <polygon id="Triangle" stroke="#B18AE0" stroke-width="4" transform="translate(1305.500000, 59.500000) rotate(33.000000) translate(-1305.500000, -59.500000) " points="1305.5 44 1321 75 1290 75"></polygon>
+            <rect id="Rectangle" stroke="#00BCD6" stroke-width="4" transform="translate(631.000000, 120.000000) rotate(-30.000000) translate(-631.000000, -120.000000) " x="615" y="104" width="32" height="32"></rect>
+            <rect id="Rectangle" stroke="#EF3E4A" stroke-width="4" transform="translate(46.000000, 23.000000) rotate(-25.000000) translate(-46.000000, -23.000000) " x="31" y="8" width="30" height="30"></rect>
+            <rect id="Rectangle-Copy" stroke="#EF3E4A" stroke-width="4" transform="translate(1262.000000, 269.000000) rotate(-25.000000) translate(-1262.000000, -269.000000) " x="1247" y="254" width="30" height="30"></rect>
+            <circle id="Oval-3" stroke="#F0CF61" stroke-width="4" cx="1110.5" cy="12.5" r="10.5"></circle>
+            <circle id="Oval-3" stroke="#FF4C06" stroke-width="4" cx="277" cy="110" r="11"></circle>
+            <circle id="Oval-3-Copy" stroke="#61BFAD" stroke-width="4" cx="448.5" cy="50.5" r="9.5"></circle>
+            <circle id="Oval-3-Copy-2" stroke="#B18AE0" stroke-width="2" cx="535" cy="181" r="5"></circle>
+            <circle id="Oval-3-Copy-3" stroke="#00BCD6" stroke-width="2" cx="148.5" cy="95.5" r="4.5"></circle>
+            <circle id="Oval-3-Copy-5" stroke="#00BCD6" stroke-width="2" cx="1235.5" cy="123.5" r="4.5"></circle>
+        </g>
+    </g>
+</svg>

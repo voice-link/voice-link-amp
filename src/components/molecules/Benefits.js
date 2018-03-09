@@ -6,5 +6,4 @@ export default styled.ul`
   text-align: left;
   max-width: 80%;
   padding: 0;
-  margin: 1em auto;
 `;
