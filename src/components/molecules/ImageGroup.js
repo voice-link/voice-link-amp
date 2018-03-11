@@ -5,7 +5,6 @@ export default styled.div`
   flex-flow: row;
   ${({ count, size }) => `
     width: calc((${count} * ${size}px) + (${count - 1} * 2em));
-  `}
-  justify-content: space-evenly;
+  `} justify-content: space-evenly;
   margin: 1em;
 `;

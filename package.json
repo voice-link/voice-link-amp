@@ -2,6 +2,8 @@
   "name": "voice.link-amp",
   "version": "1.0.0",
   "description": "Voice.link website using AMP ⚡ and React ⚛.",
+  "repository": "https://github.com/voice-link/voice-link-amp.git",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "dev": "start-storybook -s ./ -p 9001 -c .storybook",
@@ -12,12 +14,25 @@
   "author": "Jakob Hohlfeld <jhohlfeld@polyban.io>",
   "license": "ISC",
   "dependencies": {
-    "@storybook/addon-actions": "^3.3.10",
-    "@storybook/addon-backgrounds": "^3.3.10",
-    "@storybook/addons": "^3.3.10",
-    "@storybook/react": "^3.3.10",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-backgrounds": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-styled-components": "^1.4.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.5.1",
     "next": "^4.2.3",
+    "prettier": "1.11.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-amphtml": "^2.2.2",
@@ -25,21 +40,12 @@
     "storybook-readme": "^3.2.0",
     "styled-components": "^2.4.0"
   },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-plugin-root-import": "^5.1.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.15.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-import-resolver-webpack": "^0.8.4",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1"
-  },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "extends": "airbnb",
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended"
+    ],
     "env": {
       "browser": true
     },
@@ -52,7 +58,9 @@
           "any"
         ]
       },
-      "function-paren-newline": "off"
+      "jsx-a11y/accessible-emoji": "off",
+      "function-paren-newline": "off",
+      "import/prefer-default-export": "off"
     },
     "settings": {
       "import/resolver": {
@@ -77,7 +85,8 @@
         }
       ],
       [
-        "babel-plugin-root-import", {
+        "babel-plugin-root-import",
+        {
           "rootPathSuffix": "src"
         }
       ]

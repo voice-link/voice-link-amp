@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Amp } from 'react-amphtml';
+import { Amp } from "react-amphtml";
 
 import ImageGroup from "./ImageGroup";
 

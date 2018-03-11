@@ -1,27 +1,35 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 function MouseScroll({ className }) {
   return (
     <div {...{ className }}>
       <div className="mouse">
-        <div className="wheel"></div>
+        <div className="wheel" />
       </div>
       <div>
-        <span className="m_scroll_arrows unu"></span>
-        <span className="m_scroll_arrows doi"></span>
-        <span className="m_scroll_arrows trei"></span>
+        <span className="m_scroll_arrows unu" />
+        <span className="m_scroll_arrows doi" />
+        <span className="m_scroll_arrows trei" />
       </div>
     </div>
   );
 }
 
+MouseScroll.propTypes = {
+  className: PropTypes.string
+};
+
+MouseScroll.defaultProps = {
+  className: undefined
+};
+
 export default styled(MouseScroll)`
   width: 24px;
   height: 100px;
 
-  .m_scroll_arrows
-  {
+  .m_scroll_arrows {
     display: block;
     width: 5px;
     height: 5px;
@@ -35,55 +43,47 @@ export default styled(MouseScroll)`
     height: 16px;
   }
 
-  .unu
-  {
+  .unu {
     margin-top: 1px;
   }
 
-  .unu, .doi, .trei
-  {
-      -webkit-animation: mouse-scroll 1s infinite;
-      -moz-animation: mouse-scroll 1s infinite;
+  .unu,
+  .doi,
+  .trei {
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
   }
 
-  .unu
-  {
-    -webkit-animation-delay: .1s;
-    -moz-animation-delay: .1s;
+  .unu {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
     -webkit-animation-direction: alternate;
   }
 
-  .doi
-  {
-    -webkit-animation-delay: .2s;
-    -moz-animation-delay: .2s;
-    -webkit-animation-direction: alternate;
-    margin-top: -6px;
-  }
-
-  .trei
-  {
-    -webkit-animation-delay: .3s;
-    -moz-animation-delay: .3s;
+  .doi {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
     -webkit-animation-direction: alternate;
     margin-top: -6px;
   }
 
+  .trei {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-direction: alternate;
+    margin-top: -6px;
+  }
 
-
-
-  .mouse
-  {
-  height: 42px;
-  width: 24px;
+  .mouse {
+    height: 42px;
+    width: 24px;
     border-radius: 14px;
     transform: none;
     border: 2px solid white;
     top: 170px;
   }
 
-  .wheel
-  {
+  .wheel {
     height: 5px;
     width: 2px;
     display: block;
@@ -95,22 +95,16 @@ export default styled(MouseScroll)`
     width: 4px;
     border: 2px solid #fff;
     -webkit-border-radius: 8px;
-            border-radius: 8px;
-
-
+    border-radius: 8px;
   }
 
-  .wheel
-  {
+  .wheel {
     -webkit-animation: mouse-wheel 0.6s linear infinite;
     -moz-animation: mouse-wheel 0.6s linear infinite;
   }
 
-
-
-  @-webkit-keyframes mouse-wheel
-  {
-     0% {
+  @-webkit-keyframes mouse-wheel {
+    0% {
       opacity: 1;
       -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -125,37 +119,66 @@ export default styled(MouseScroll)`
     }
   }
 
-  @-moz-keyframes mouse-wheel
-  {
-    0% { top: 1px; }
-    25% { top: 2px; }
-    50% { top: 3px;}
-    75% { top: 2px;}
-    100% { top: 1px;}
+  @-moz-keyframes mouse-wheel {
+    0% {
+      top: 1px;
+    }
+    25% {
+      top: 2px;
+    }
+    50% {
+      top: 3px;
+    }
+    75% {
+      top: 2px;
+    }
+    100% {
+      top: 1px;
+    }
   }
 
   @-webkit-keyframes mouse-scroll {
-
-    0%   { opacity: 0;}
-    50%  { opacity: .5;}
-    100% { opacity: 1;}
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-moz-keyframes mouse-scroll {
-
-    0%   { opacity: 0; }
-    50%  { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @-o-keyframes mouse-scroll {
-
-    0%   { opacity: 0; }
-    50%  { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   @keyframes mouse-scroll {
-
-    0%   { opacity: 0; }
-    50%  { opacity: .5; }
-    100% { opacity: 1; }
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Amp } from 'react-amphtml';
+import { Amp } from "react-amphtml";
 
 export default function Avatar({ avatar, size }) {
   return (

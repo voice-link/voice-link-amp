@@ -7,7 +7,6 @@ import {
   Headline,
   SectionHeadline,
   Caption,
-  HeadAndClaim,
   Avatar,
   TextSegment,
   BenefitItem,
@@ -31,29 +30,27 @@ export default function Homepage() {
       <ViewSection header>
         <Logo />
 
-        <HeadAndClaim>
-          <Headline>
-            Wir sind fasziniert von Sprache
-          </Headline>
-          <Caption>Sprachassistenten + ai = wow🔥</Caption>
-        </HeadAndClaim>
+        <Headline>wir lieben voice</Headline>
+        <Caption>Sprachassistenten + ai = wow🔥</Caption>
 
         <MouseScroll />
       </ViewSection>
 
       <ViewSection id="start">
-        <SectionHeadline>🤖 ein freundlicher Helfer</SectionHeadline>
+        <SectionHeadline>🤖ein freundlicher Helfer</SectionHeadline>
 
         <TextSegment>
-          Wir entwickeln Benutzererlebnisse und helfen deinem Unternehmen, die richtige
-          Botschaft an deine Kunden zu senden. Du profitierst von unseren umfangreichen Kenntnissen der
-          Sprachassistenz-Plattfomen <i>Amazon Alexa</i>, <i>Google Home</i> und <i>Facebook Messenger</i>.
+          Wir entwickeln Benutzererlebnisse und helfen deinem Unternehmen, die
+          richtige Botschaft an deine Kunden zu senden. Du profitierst von
+          unseren umfangreichen Kenntnissen der Sprachassistenz-Plattfomen{" "}
+          <i>Amazon Alexa</i>, <i>Google Home</i> und <i>Facebook Messenger</i>.
         </TextSegment>
 
         <VendorLogos size={76} />
 
         <TextSegment>
-          Verbinde deine Kundenkonten, Warenkörbe und Zahlungsvorgänge ganz einfach mit der jeweiligen Plattform.
+          Verbinde deine Kundenkonten, Warenkörbe und Zahlungsvorgänge ganz
+          einfach mit der jeweiligen Plattform.
         </TextSegment>
 
         <CallToAction href="#pakete">Schau dir an, wie das geht</CallToAction>
@@ -63,10 +60,9 @@ export default function Homepage() {
         <SectionHeadline>Künstliche Intelligenz</SectionHeadline>
 
         <TextSegment>
-          Mit Hilfe Künstlicher Intelligenz und Intent-Recognition nehmen wir Dir
-          ein paar der alltäglichen Sorgen.
-          Deine Mitarbeiter werden entlastet und können sich um
-          wirklich wichtige Dinge kümmern.
+          Mit Hilfe Künstlicher Intelligenz und Intent-Recognition nehmen wir
+          Dir ein paar der alltäglichen Sorgen. Deine Mitarbeiter werden
+          entlastet und können sich um wirklich wichtige Dinge kümmern.
         </TextSegment>
 
         <ImageGroup count={2} size={240}>
@@ -76,26 +72,24 @@ export default function Homepage() {
         </ImageGroup>
 
         <Benefits>
-          <BenefitItem icon="✈️">
-            engagiertere Nutzer
-          </BenefitItem>
-          <BenefitItem icon="❤️">
-            zufriedenere Kunden
-          </BenefitItem>
-          <BenefitItem icon="🌟">
-            effizientere Prozesse
-          </BenefitItem>
+          <BenefitItem icon="✈️">engagiertere Nutzer</BenefitItem>
+          <BenefitItem icon="❤️">zufriedenere Kunden</BenefitItem>
+          <BenefitItem icon="🌟">effizientere Prozesse</BenefitItem>
         </Benefits>
 
-        <CallToAction wide href="#pakete">Erfahre, wie es geht</CallToAction>
+        <CallToAction wide href="#pakete">
+          Erfahre, wie es geht
+        </CallToAction>
       </ViewSection>
 
       <ViewSection id="pakete">
         <SectionHeadline>Wähle dein Paket</SectionHeadline>
 
         <TextSegment>
-          Wir haben drei Pakete für dich zusammengestellt. Wenn Dir eins gefällt,
-          klicke auf <span className="call-to-action">Jetzt buchen</span>, um direkt loszulegen.
+          Wir haben drei Pakete für dich zusammengestellt. Wenn Dir eins
+          gefällt, klicke auf{" "}
+          <span className="call-to-action">Jetzt buchen</span>, um direkt
+          loszulegen.
         </TextSegment>
 
         <h3>Amazon Alexa oder Google Home</h3>
@@ -123,13 +117,17 @@ export default function Homepage() {
         <h3>Dynamische Web-Dienste & KI</h3>
 
         <ul className="packages">
-          <li><b><i>Alles aus “Dabeisein ist Alles”</i></b></li>
+          <li>
+            <b>
+              <i>Alles aus “Dabeisein ist Alles”</i>
+            </b>
+          </li>
           <li>Erstellung technisches Konzept</li>
           <li>Programmierung Datenschnittstelle</li>
           <li>Kundenkonto von Amazon, Google oder Messenger Platform</li>
           <li>
-            Natural Language Processing (NLP) für realitätsnahe
-            konversationelle Interaktion
+            Natural Language Processing (NLP) für realitätsnahe konversationelle
+            Interaktion
           </li>
         </ul>
 
@@ -139,7 +137,9 @@ export default function Homepage() {
 
         <ul className="packages">
           <li>
-            <b><i>Alles aus “Dabeisein ist Alles” und “Context is God”</i></b>
+            <b>
+              <i>Alles aus “Dabeisein ist Alles” und “Context is God”</i>
+            </b>
           </li>
           <li>Warenkorb</li>
           <li>Checkout/Payment-Prozess</li>
@@ -151,16 +151,15 @@ export default function Homepage() {
 
       <ViewSection footer>
         <p>
-        Voice.link Speech Interaction Design<br/>
-        Schillerstraße 40, 38440 Wolfsburg
+          Voice.link Speech Interaction Design<br />
+          Schillerstraße 40, 38440 Wolfsburg
         </p>
 
         <p>
-        hello@voice.link<br/>
-        +49 5361 83 49 128
+          hello@voice.link<br />
+          +49 5361 83 49 128
         </p>
       </ViewSection>
-
     </Container>
   );
 }
