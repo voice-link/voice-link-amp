@@ -5,11 +5,11 @@ import styled from "styled-components";
 const FontList = styled.ul``;
 
 const FontListItem = styled.li`
-    list-style: none;
-    margin: 1rem 0;
+  list-style: none;
+  margin: 1rem 0;
 
-    ${props => props.font}
-  `;
+  ${props => props.font};
+`;
 
 const Subtext = styled.div`
   font-family: Arial;
@@ -21,16 +21,14 @@ const Subtext = styled.div`
 export default function Fonts({ fonts }) {
   return (
     <FontList>
-      {
-        Object.keys(fonts).map(fontName => (
-          <FontListItem fontName={fontName} font={fonts[fontName]}>
-            {fontName[0].toUpperCase()}{fontName.substr(1)}<br />
-            <Subtext>
-              {fonts[fontName]}
-            </Subtext>
-          </FontListItem>
-        ))
-      }
+      {Object.keys(fonts).map(fontName => (
+        <FontListItem fontName={fontName} font={fonts[fontName]}>
+          {fontName[0].toUpperCase()}
+          {fontName.substr(1)}
+          <br />
+          <Subtext>{fonts[fontName]}</Subtext>
+        </FontListItem>
+      ))}
     </FontList>
   );
 }

@@ -22,22 +22,30 @@ const Button = styled.a`
     }
   `}
 
-  ${props => props.dark && `
+  ${props =>
+    props.dark &&
+    `
     &:hover {
       box-shadow: 0 0px 12px 4px ${props.theme.colors.accentLightTransparent};
     }
   `}
 
-  ${props => props.large && `
+  ${props =>
+    props.large &&
+    `
     margin: 1em;
     font-size: 1.4em;
   `}
 
-  ${props => props.wide && `
+  ${props =>
+    props.wide &&
+    `
     margin: 1em;
   `}
 
-  ${props => props.hanging && `
+  ${props =>
+    props.hanging &&
+    `
     position: absolute;
     top: 1em;
     right: 1em;
@@ -47,14 +55,18 @@ const Button = styled.a`
 
 export default function CallToAction({ children, href = "#start", ...props }) {
   return (
-    <Button {...props} href={href}>{children}</Button>
+    <Button {...props} href={href}>
+      {children}
+    </Button>
   );
 }
 
 CallToAction.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  href: PropTypes.string
 };
 
 CallToAction.defaultProps = {
-  children: undefined
+  children: undefined,
+  href: undefined
 };

@@ -12,11 +12,15 @@ const Section = styled.section`
   min-height: 90vh;
   padding: 1em;
 
-  ${props => props.color && `
+  ${props =>
+    props.color &&
+    `
     background-color: ${theme.colors[props.color]};
   `}
 
-  ${props => props.header && `
+  ${props =>
+    props.header &&
+    `
     background-color: ${props.theme.colors.almostblack};
     background-image: url(static/doodle_background.svg);
     background-position: center;
@@ -26,7 +30,9 @@ const Section = styled.section`
     justify-content: space-between;
   `}
 
-  ${props => props.footer && `
+  ${props =>
+    props.footer &&
+    `
     background-color: ${props.theme.colors.almostblack};
     background-image: url(static/doodle_background_footer.svg);
     background-size: contain;
@@ -41,9 +47,7 @@ const Section = styled.section`
 `;
 
 export default function ViewSection({ children, ...props }) {
-  return (
-    <Section {...props}>{children}</Section>
-  );
+  return <Section {...props}>{children}</Section>;
 }
 
 ViewSection.propTypes = {
