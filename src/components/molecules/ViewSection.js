@@ -43,6 +43,15 @@ const Section = styled.section`
     margin-top: 6rem;
     padding-top: 5rem;
     min-height: auto;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   `}
 `;
 

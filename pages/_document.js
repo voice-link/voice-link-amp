@@ -3,10 +3,10 @@ import Document from "next/document";
 import {
   AmpScripts,
   AmpScriptsManager,
-  headerBoilerplate,
+  headerBoilerplate
 } from "react-amphtml";
-import { ServerStyleSheet } from "styled-components";
-import "../src/themes";
+import { ServerStyleSheet, ThemeProvider } from "styled-components";
+import theme from "../src/themes";
 
 export default class MyDocument extends Document {
   static getInitialProps({ req, renderPage }) {
@@ -17,7 +17,9 @@ export default class MyDocument extends Document {
       App => props => (
         sheet.collectStyles((
           <AmpScriptsManager ampScripts={ampScripts}>
-            <App {...props} />
+            <ThemeProvider theme={theme}>
+              <App {...props} />
+            </ThemeProvider>
           </AmpScriptsManager>
         ))
       )

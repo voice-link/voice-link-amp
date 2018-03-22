@@ -1,6 +1,7 @@
 import { injectGlobal } from "styled-components";
 import colors from "./colors";
 import fonts from "./fonts";
+import flexboxgrid from "./flexboxgrid";
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
@@ -42,5 +43,6 @@ injectGlobal`
 
 export default {
   colors,
-  fonts
+  fonts,
+  flexboxgrid
 };

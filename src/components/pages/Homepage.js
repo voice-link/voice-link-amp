@@ -1,5 +1,8 @@
 import React from "react";
 import Head from "next/head";
+import { withTheme } from "styled-components";
+import { Amp } from "react-amphtml";
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 import {
   Logo,
@@ -10,7 +13,8 @@ import {
   Avatar,
   TextSegment,
   BenefitItem,
-  MouseScroll
+  MouseScroll,
+  PackageActions
 } from "components/atoms";
 import {
   ViewSection,
@@ -18,9 +22,10 @@ import {
   ImageGroup,
   Benefits
 } from "components/molecules";
+import { Package } from "components/organisms";
 import Container from "components/Container";
 
-export default function Homepage() {
+function Homepage() {
   return (
     <Container>
       <Head>
@@ -37,7 +42,9 @@ export default function Homepage() {
       </ViewSection>
 
       <ViewSection id="start">
-        <SectionHeadline>🤖ein freundlicher Helfer</SectionHeadline>
+        <SectionHeadline>
+          Ein freundlicher Helfer<br />🤖
+        </SectionHeadline>
 
         <TextSegment>
           Wir entwickeln Benutzererlebnisse und helfen deinem Unternehmen, die
@@ -92,61 +99,75 @@ export default function Homepage() {
           loszulegen.
         </TextSegment>
 
-        <h3>Amazon Alexa oder Google Home</h3>
-
-        <ul className="packages">
-          <li>Anmelden und Zertifizieren Skill / Action</li>
-          <li>Erstellung Interaktionskonzept</li>
-          <li>Entwicklung Sprachinhalte (Dialog-Design)</li>
-          <li>Branding</li>
-        </ul>
-
-        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
-
-        <h3>Facebook Messenger oder eigene Chat-Plattform</h3>
-
-        <ul className="packages">
-          <li>Erstellung Interaktionskonzept</li>
-          <li>Entwicklung Sprachinhalte (Dialog-Design)</li>
-          <li>Branding</li>
-          <li>Webentwicklung</li>
-        </ul>
-
-        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
-
-        <h3>Dynamische Web-Dienste & KI</h3>
-
-        <ul className="packages">
-          <li>
-            <b>
-              <i>Alles aus “Dabeisein ist Alles”</i>
-            </b>
-          </li>
-          <li>Erstellung technisches Konzept</li>
-          <li>Programmierung Datenschnittstelle</li>
-          <li>Kundenkonto von Amazon, Google oder Messenger Platform</li>
-          <li>
-            Natural Language Processing (NLP) für realitätsnahe konversationelle
-            Interaktion
-          </li>
-        </ul>
-
-        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
-
-        <h3>Integration für Handel und Kundendienst</h3>
-
-        <ul className="packages">
-          <li>
-            <b>
-              <i>Alles aus “Dabeisein ist Alles” und “Context is God”</i>
-            </b>
-          </li>
-          <li>Warenkorb</li>
-          <li>Checkout/Payment-Prozess</li>
-          <li>Waren- und Kundendaten (WaWi & CRM)</li>
-        </ul>
-
-        <CallToAction href="#buchen">Jetzt buchen</CallToAction>
+        <Grid>
+          <Row>
+            <Col xs={12} md={4}>
+              <Package title="Basis" headline="Sprachassistent & Chatbot">
+                <ul>
+                  <li>
+                    Gemeinsam mit deinem Team entwickeln wir das
+                    Interaktionskonzept.
+                  </li>
+                  <li>
+                    Wir entwickeln die Aktionen für Alexa, Google Home und
+                    Facebook Messenger.
+                  </li>
+                  <li>
+                    Wir kümmern uns um den reibungslosen Betrieb und die
+                    hochverfügbare Einrichtung.
+                  </li>
+                </ul>
+                <PackageActions>
+                  <CallToAction href="#buchen">Jetzt buchen</CallToAction>
+                </PackageActions>
+              </Package>
+            </Col>
+            <Col xs={12} md={4}>
+              <Package title="Smart" headline="Automatische Kundenbetreuung">
+                <ul>
+                  <li>
+                    <b>
+                      <i>Alles aus “Basis”</i>
+                    </b>
+                  </li>
+                  <li>
+                    Wir verarbeiten die Daten deines Unternehmens, um
+                    realitätsnahe automatische Interaktionen zu ermöglichen.
+                  </li>
+                  <li>
+                    Damit ist es möglich, die Kundenbetreuung deines
+                    Unternehmens großflächig zu automatisieren.
+                  </li>
+                </ul>
+                <PackageActions>
+                  <CallToAction href="#buchen">Jetzt buchen</CallToAction>
+                </PackageActions>
+              </Package>
+            </Col>
+            <Col xs={12} md={4}>
+              <Package title="Integration" headline="Handel und Kundendienst">
+                <ul className="packages">
+                  <li>
+                    <b>
+                      <i>Alles aus “Smart”</i>
+                    </b>
+                  </li>
+                  <li>
+                    Unsere Plattform kann den Warenkatalog deines Unternehmens
+                    verarbeiten.
+                  </li>
+                  <li>
+                    Wir verbinden die Konten der Kunden deines Unternehmens, um
+                    Bestellungen und Bezahlungen abzuwickeln.
+                  </li>
+                </ul>
+                <PackageActions>
+                  <CallToAction href="#buchen">Jetzt buchen</CallToAction>
+                </PackageActions>
+              </Package>
+            </Col>
+          </Row>
+        </Grid>
       </ViewSection>
 
       <ViewSection footer>
@@ -163,3 +184,5 @@ export default function Homepage() {
     </Container>
   );
 }
+
+export default withTheme(Homepage);

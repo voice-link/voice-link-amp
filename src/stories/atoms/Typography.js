@@ -18,7 +18,7 @@ const Subtext = styled.div`
   line-height: 1;
 `;
 
-export default function Fonts({ fonts }) {
+export default function Typography({ fonts }) {
   return (
     <FontList>
       {Object.keys(fonts).map(fontName => (
@@ -33,10 +33,10 @@ export default function Fonts({ fonts }) {
   );
 }
 
-Fonts.propTypes = {
+Typography.propTypes = {
   fonts: PropTypes.array
 };
 
-Fonts.defaultProps = {
+Typography.defaultProps = {
   fonts: []
 };
