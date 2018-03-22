@@ -6,5 +6,4 @@ export default styled.div`
   margin-bottom: 0.6em;
   line-height: 1.2;
   max-width: 80%;
-  text-transform: lowercase;
 `;

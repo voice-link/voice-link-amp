@@ -8,3 +8,4 @@ export { default as Avatar } from "./Avatar";
 export { default as TextSegment } from "./TextSegment";
 export { default as BenefitItem } from "./BenefitItem";
 export { default as MouseScroll } from "./MouseScroll";
+export { default as PackageActions } from "./PackageActions";

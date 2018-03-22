@@ -7,7 +7,7 @@ import { Logo, CallToAction, Avatar, BenefitItem } from "components/atoms";
 import backgrounds from "../backgrounds";
 import Background from "./Background";
 import Colors from "./Colors";
-import Fonts from "./Fonts";
+import Typography from "./Typography";
 
 const Frame = styled.div`
   margin: 1em;
@@ -17,7 +17,7 @@ storiesOf("Atoms", module)
   .addDecorator(backgrounds)
   .add("Background", () => <Background />)
   .add("Colors", () => <Colors colors={theme.colors} />)
-  .add("Fonts", () => <Fonts fonts={theme.fonts} />)
+  .add("Typography", () => <Typography fonts={theme.fonts} />)
   .add("Logo", () => <Logo />)
   .add("CallToAction", () => (
     <Frame>
