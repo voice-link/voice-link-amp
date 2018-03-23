@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import { withTheme } from "styled-components";
 
-import { Logo } from "components/atoms";
-import { ViewSection } from "components/molecules";
-import Container from "components/Container";
+import { Caption, Logo, SectionHeadline } from "../atoms";
+import { ViewSection } from "../molecules";
+import Container from "../Container";
 
 function Imprint() {
   return (
@@ -18,7 +18,7 @@ function Imprint() {
       </ViewSection>
 
       <ViewSection id="top" imprint>
-        <h2>Impressum</h2>
+        <SectionHeadline>Impressum</SectionHeadline>
 
         <p>
           Voice.link Speech Interaction Design<br />
@@ -31,7 +31,7 @@ function Imprint() {
           Email: <a href="mailto:hello@polyban.io">hello@polyban.io</a>
         </p>
 
-        <h2>Datenschutzerklärung</h2>
+        <Caption>Datenschutzerklärung</Caption>
 
         <p>Verantwortlicher:</p>
         <p>

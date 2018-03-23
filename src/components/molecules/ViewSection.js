@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import theme from "themes";
+import theme from "../../themes";
 
 const Section = styled.section`
   align-items: center;
@@ -75,9 +75,9 @@ const Section = styled.section`
       h3 {
         counter-increment: section;
         counter-reset: subsection;
-        padding-left: ${props.theme.layout.orderedListPadding};
+        padding-left: ${props.theme.layout.orderedList.headline.padding};
         position: relative;
-        font-size: 1em;
+        font-size: ${props.theme.layout.orderedList.headline.fontSize};
 
         &:before {
           content: counter(section) ".";
@@ -89,7 +89,7 @@ const Section = styled.section`
       > li {
         margin: 1em 0;
         position: relative;
-        padding-left: ${props.theme.layout.orderedListPadding};
+        padding-left: ${props.theme.layout.orderedList.padding};
 
         &:before {
           counter-increment: subsection;

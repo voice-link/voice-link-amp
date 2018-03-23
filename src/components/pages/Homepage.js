@@ -12,18 +12,12 @@ import {
   Caption,
   Avatar,
   TextSegment,
-  BenefitItem,
   MouseScroll,
   PackageActions
-} from "components/atoms";
-import {
-  ViewSection,
-  VendorLogos,
-  ImageGroup,
-  Benefits
-} from "components/molecules";
-import { Package } from "components/organisms";
-import Container from "components/Container";
+} from "../atoms";
+import { ViewSection, VendorLogos } from "../molecules";
+import { Package } from "../organisms";
+import Container from "../Container";
 
 function Homepage() {
   return (
@@ -72,17 +66,22 @@ function Homepage() {
           entlastet und können sich um wirklich wichtige Dinge kümmern.
         </TextSegment>
 
-        <ImageGroup count={2} size={240}>
-          <Avatar avatar="avatar1" />
-          <Avatar avatar="avatar2" />
-          <Avatar avatar="avatar3" />
-        </ImageGroup>
-
-        <Benefits>
-          <BenefitItem icon="✈️">engagiertere Nutzer</BenefitItem>
-          <BenefitItem icon="❤️">zufriedenere Kunden</BenefitItem>
-          <BenefitItem icon="🌟">effizientere Prozesse</BenefitItem>
-        </Benefits>
+        <Grid>
+          <Row>
+            <Col xs={12} md={4}>
+              <Avatar avatar="avatar1" />
+              <div>✈️ engagiertere Nutzer</div>
+            </Col>
+            <Col xs={12} md={4}>
+              <Avatar avatar="avatar2" />
+              <div>❤️ zufriedenere Kunden</div>
+            </Col>
+            <Col xs={12} md={4}>
+              <Avatar avatar="avatar3" />
+              <div>🌟 effizientere Prozesse</div>
+            </Col>
+          </Row>
+        </Grid>
 
         <CallToAction wide href="#pakete">
           Erfahre, wie es geht

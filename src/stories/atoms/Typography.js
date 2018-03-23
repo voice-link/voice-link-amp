@@ -21,8 +21,8 @@ const Subtext = styled.div`
 export default function Typography({ fonts }) {
   return (
     <FontList>
-      {Object.keys(fonts).map(fontName => (
-        <FontListItem fontName={fontName} font={fonts[fontName]}>
+      {Object.keys(fonts).map((fontName, index) => (
+        <FontListItem fontName={fontName} font={fonts[fontName]} key={index}>
           {fontName[0].toUpperCase()}
           {fontName.substr(1)}
           <br />
@@ -34,9 +34,9 @@ export default function Typography({ fonts }) {
 }
 
 Typography.propTypes = {
-  fonts: PropTypes.array
+  fonts: PropTypes.object
 };
 
 Typography.defaultProps = {
-  fonts: []
+  fonts: undefined
 };

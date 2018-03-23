@@ -6,8 +6,6 @@ import layout from "./layout";
 
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
-  @import url("https://fonts.googleapis.com/css?family=Nunito|PT+Sans");
-
   body {
     ${fonts.body}
     line-height: 1.5;

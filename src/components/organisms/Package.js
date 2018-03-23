@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PackageHeader from "components/atoms/PackageHeader";
-import PackageContent from "components/atoms/PackageContent";
+import PackageHeader from "../atoms/PackageHeader";
+import PackageContent from "../atoms/PackageContent";
 import styled from "styled-components";
 
 const StyledPackage = styled("div")`
