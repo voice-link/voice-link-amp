@@ -28,7 +28,7 @@ function Imprint() {
         </p>
         <p>
           Telefon: +49 (0) 5361 834 91 28<br />
-          Email: <a href="mailto:hello@polyban.io">hello@polyban.io</a>
+          Email: <a href="mailto:hello@voice.link">hello@voice.link</a>
         </p>
 
         <Caption>Datenschutzerklärung</Caption>
