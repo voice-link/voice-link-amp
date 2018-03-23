@@ -10,7 +10,7 @@ function Imprint() {
   return (
     <Container>
       <Head>
-        <title>Voice.link | Imprint</title>
+        <title>Voice.link | Impressum & Datenschutz</title>
       </Head>
 
       <ViewSection header-small>

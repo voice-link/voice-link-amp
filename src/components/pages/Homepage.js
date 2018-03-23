@@ -23,13 +23,13 @@ function Homepage() {
   return (
     <Container>
       <Head>
-        <title>Voice.link | Having a great conversation</title>
+        <title>Voice.link | wir lieben voice</title>
       </Head>
 
       <ViewSection header>
         <Logo />
 
-        <Headline>wir lieben voice</Headline>
+        <Headline>Wir lieben voice</Headline>
         <Caption>Sprachassistenten + ai = wow🔥</Caption>
 
         <MouseScroll />
