@@ -24,6 +24,10 @@ function Homepage() {
     <Container>
       <Head>
         <title>Voice.link | wir lieben voice</title>
+        <meta
+          name="keywords"
+          content="amazon alexa, google home, alexa skill, google home action, chatbot"
+        />
       </Head>
 
       <ViewSection header>
@@ -176,7 +180,8 @@ function Homepage() {
         </p>
 
         <p>
-          <a href="mailto:hello@voice.link">hello@voice.link</a><br />
+          <a href="mailto:hello@voice.link">hello@voice.link</a>
+          <br />
           +49 5361 83 49 128
         </p>
 

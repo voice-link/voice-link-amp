@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import PackageHeader from "../atoms/PackageHeader";
 import PackageContent from "../atoms/PackageContent";
-import styled from "styled-components";
 
 const StyledPackage = styled("div")`
   height: 100%;
