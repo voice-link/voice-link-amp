@@ -19,6 +19,7 @@ storiesOf("Atoms", module)
   .add("Colors", () => <Colors colors={theme.colors} />)
   .add("Typography", () => <Typography fonts={theme.fonts} />)
   .add("Logo", () => <Logo />)
+  .add("Logo dark", () => <Logo dark />)
   .add("CallToAction", () => (
     <Frame>
       <CallToAction>Call to action</CallToAction>

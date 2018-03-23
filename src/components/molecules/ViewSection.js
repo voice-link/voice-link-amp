@@ -31,6 +31,12 @@ const Section = styled.section`
   `}
 
   ${props =>
+    props["header-small"] &&
+    `
+    min-height: auto;
+  `}
+
+  ${props =>
     props.footer &&
     `
     background-color: ${props.theme.colors.almostblack};
@@ -50,6 +56,51 @@ const Section = styled.section`
 
       &:hover {
         text-decoration: underline;
+      }
+    }
+  `}
+
+  ${props =>
+    props.imprint &&
+    `
+    text-align: left;
+    font-size: 1rem;
+    text-align: center;
+
+    ol {
+      list-style: none;
+      counter-reset: section;
+      text-align: left;
+
+      h3 {
+        counter-increment: section;
+        counter-reset: subsection;
+        padding-left: ${props.theme.layout.orderedListPadding};
+        position: relative;
+        font-size: 1em;
+
+        &:before {
+          content: counter(section) ".";
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      > li {
+        margin: 1em 0;
+        position: relative;
+        padding-left: ${props.theme.layout.orderedListPadding};
+
+        &:before {
+          counter-increment: subsection;
+          content: counter(section) "." counter(subsection) ".";
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      ul li {
+        margin: 1em 0;
       }
     }
   `}

@@ -1,7 +1,7 @@
 module.exports = {
-  distDir: 'build',
+  distDir: "build",
   exportPathMap: () => ({
-    '/': { page: '/' }
+    "/": { page: "/" }
   }),
   onDemandEntries: {
     maxInactiveAge: 100,

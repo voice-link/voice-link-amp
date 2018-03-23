@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import { withTheme } from "styled-components";
-import { Amp } from "react-amphtml";
 import { Grid, Col, Row } from "react-styled-flexboxgrid";
+import Link from "next/link";
 
 import {
   Logo,
@@ -179,6 +179,12 @@ function Homepage() {
         <p>
           hello@voice.link<br />
           +49 5361 83 49 128
+        </p>
+
+        <p>
+          <Link href="/imprint">
+            <a>Impressum & Datenschutz</a>
+          </Link>
         </p>
       </ViewSection>
     </Container>
