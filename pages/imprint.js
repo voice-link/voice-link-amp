@@ -1,4 +1,4 @@
 import React from "react";
-import { Imprint } from "components/pages";
+import { Imprint } from "../src/components/pages";
 
 export default () => <Imprint />;

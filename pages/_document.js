@@ -73,6 +73,8 @@ export default class MyDocument extends Document {
           {headerBoilerplate(url)}
           {ampScriptTags}
           {ampStyleTag}
+          <link href="https://fonts.googleapis.com/css?family=Nunito|Merriweather+Sans:400,800" rel="stylesheet" />
+          <link rel="icon" type="image/png" href="static/favicon.png" />
         </head>
         <body dangerouslySetInnerHTML={{ __html: html }} />
       </html>

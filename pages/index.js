@@ -1,4 +1,4 @@
 import React from "react";
-import { Homepage } from "components/pages";
+import { Homepage } from "../src/components/pages";
 
 export default () => <Homepage />;

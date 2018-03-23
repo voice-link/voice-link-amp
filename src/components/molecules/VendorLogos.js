@@ -1,36 +1,43 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Amp } from "react-amphtml";
-
-import ImageGroup from "./ImageGroup";
+import { Grid, Col, Row } from "react-styled-flexboxgrid";
 
 export default function VendorLogos({ size, light }) {
   const variant = light ? "-white" : "";
 
   return (
-    <ImageGroup size={size} count={3}>
-      <Amp.Img
-        src={`static/alexa${variant}.svg`}
-        alt="Amazon Alexa"
-        height={size}
-        width={size}
-        layout="fixed"
-      />
-      <Amp.Img
-        src={`static/google${variant}.svg`}
-        alt="Google Home"
-        height={size}
-        width={size}
-        layout="fixed"
-      />
-      <Amp.Img
-        src={`static/messenger${variant}.svg`}
-        alt="Messenger Platform"
-        height={size}
-        width={size}
-        layout="fixed"
-      />
-    </ImageGroup>
+    <Grid>
+      <Row>
+        <Col smOffset={3} sm={2}>
+          <Amp.Img
+            src={`static/alexa${variant}.svg`}
+            alt="Amazon Alexa"
+            height={size}
+            width={size}
+            layout="fixed"
+          />
+        </Col>
+        <Col sm={2}>
+          <Amp.Img
+            src={`static/google${variant}.svg`}
+            alt="Google Home"
+            height={size}
+            width={size}
+            layout="fixed"
+          />
+        </Col>
+        <Col sm={2}>
+          <Amp.Img
+            src={`static/messenger${variant}.svg`}
+            alt="Messenger Platform"
+            height={size}
+            width={size}
+            layout="fixed"
+          />
+        </Col>
+      </Row>
+    </Grid>
   );
 }
 
