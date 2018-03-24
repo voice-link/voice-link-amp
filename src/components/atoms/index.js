@@ -1,3 +1,4 @@
+export { default as Analytics } from "./Analytics";
 export { default as Logo } from "./Logo";
 export { default as CallToAction } from "./CallToAction";
 export { default as Headline } from "./Headline";

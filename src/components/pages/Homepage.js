@@ -5,6 +5,7 @@ import { Grid, Col, Row } from "react-styled-flexboxgrid";
 import Link from "next/link";
 
 import {
+  Analytics,
   Logo,
   CallToAction,
   Headline,
@@ -191,6 +192,8 @@ function Homepage() {
           </Link>
         </p>
       </ViewSection>
+
+      <Analytics />
     </Container>
   );
 }

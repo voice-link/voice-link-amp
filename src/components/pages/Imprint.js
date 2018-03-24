@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { withTheme } from "styled-components";
 
-import { Caption, Logo, SectionHeadline } from "../atoms";
+import { Analytics, Caption, Logo, SectionHeadline } from "../atoms";
 import { ViewSection } from "../molecules";
 import Container from "../Container";
 
@@ -410,6 +410,8 @@ function Imprint() {
           </li>
         </ol>
       </ViewSection>
+
+      <Analytics />
     </Container>
   );
 }
