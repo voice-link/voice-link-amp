@@ -35,7 +35,7 @@ function Homepage() {
         <Logo />
 
         <Headline>Wir lieben voice</Headline>
-        <Caption>Sprachassistenten + ai = wow🔥</Caption>
+        <Caption>Sprachassistenten + AI = wow🔥</Caption>
 
         <MouseScroll />
       </ViewSection>
